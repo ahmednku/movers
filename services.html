@@ -3,15 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Movers</title>
+    <title>Movers - Transport Services</title>
     <link rel="icon" href="./favicon.ico" />
     <link rel="stylesheet" href="./assets/aos/css/aos.css" />
     <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="./assets/css/styles.css" />
-  </head>
-  <body>
-    <h1>Movers</h1>
-    <script src="./assets/bootstrap/js/bootstrap.bundle.min.js"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -19,6 +15,125 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <style>
+      .hero-section {
+        background: url("./assets/images/moving-hero.jpg") no-repeat center
+          center;
+        background-size: cover;
+        color: #fff;
+        padding: 100px 0;
+        text-align: center;
+      }
+
+      .hero-section h1 {
+        font-size: 3rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+
+      .hero-section p {
+        font-size: 1.25rem;
+        margin-bottom: 30px;
+      }
+
+      .service-card {
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .service-card:hover {
+        transform: translateY(-10px);
+      }
+
+      .service-icon {
+        font-size: 3rem;
+      }
+
+      .service-card h3 {
+        font-size: 1.5rem;
+        margin-top: 20px;
+      }
+
+      .service-card p {
+        font-size: 1rem;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header"></div>
+
+    <section class="hero-section overflow-hidden">
+      <div class="container">
+        <h1 data-aos="fade-left">Efficient Transport Services in Jeddah</h1>
+        <p data-aos="fade-right">
+          Ensuring a smooth move with expert care. Experience our dedication to
+          quality and customer satisfaction.
+        </p>
+      </div>
+    </section>
+
+    <main class="container services overflow-hidden">
+      <section>
+        <div class="row">
+          <h2 class="text-center mb-5">Our Comprehensive Moving Solutions</h2>
+          <div class="col-md-4 my-3" data-aos="fade-up">
+            <div class="card service-card text-center p-4">
+              <i class="fa-solid fa-truck service-icon text-seagreen"></i>
+              <h3>Reliable Moving</h3>
+              <p>
+                Our team ensures that your belongings are transported safely and
+                securely to your new location with utmost care and efficiency,
+                making sure every item arrives in perfect condition at its
+                destination.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4 my-3" data-aos="fade-up">
+            <div class="card service-card text-center p-4">
+              <i class="fa-solid fa-box service-icon text-seagreen"></i>
+              <h3>Packaging Services</h3>
+              <p>
+                We provide high-quality packing materials and expert services
+                designed to protect your items throughout the entire transit
+                process. Our solutions ensure your possessions are
+                well-protected from any potential damage.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4 my-3" data-aos="fade-up">
+            <div class="card service-card text-center p-4">
+              <i class="fa-solid fa-home service-icon text-seagreen"></i>
+              <h3>Residential Moves</h3>
+              <p>
+                Whether you’re moving across town or to a different city, we
+                offer seamless residential moving services tailored to your
+                needs. Our experienced team handles everything to make your
+                transition smooth and stress-free.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="cta-section" data-aos="fade-up">
+        <div class="container">
+          <h2>Ready to Make Your Move?</h2>
+          <p>
+            Contact us today for a free quote and let us help you with your next
+            move. Our team is here to assist you every step of the way!
+          </p>
+          <a
+            href="#!"
+            data-aos="fade-left"
+            class="btn btn-custom primary-bg text-white"
+            >Get a Free Quote</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <div id="footer"></div>
+
+    <script src="./assets/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/aos/js/aos.js"></script>
     <script src="./assets/js/app.js"></script>
   </body>

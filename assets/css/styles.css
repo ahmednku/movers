@@ -5,8 +5,9 @@
 }
 
 html {
-  --bg-color: #111d4a;
-  --text-color: #ffcf99;
+  --bg-color: seagreen;
+  --text-color: seagreen;
+  --heading-color: orangered;
 }
 
 .primary-text {
@@ -17,8 +18,8 @@ html {
   background: var(--bg-color) !important;
 }
 
-#footer {
-  background-color: var(--bg-color);
+.heading-color {
+  /* color: var(--heading-color); */
 }
 
 :root,
@@ -27,12 +28,24 @@ body {
   height: 100%;
 }
 
+.text-seagreen {
+  color: seagreen !important;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
 section {
   margin: 100px auto;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+header ul a {
+  width: max-content !important;
 }
 
 .navbar-toggler {
@@ -83,15 +96,8 @@ section {
   margin-bottom: 30px;
 }
 
-.btn-custom {
-  background-color: #007bff;
-  color: #fff;
-  border-radius: 20px;
-}
-
 .btn-custom:hover {
-  background-color: #0056b3;
-  color: #fff;
+  background-color: #0056b3 !important;
 }
 
 .service-icon {
@@ -134,10 +140,6 @@ section {
   box-shadow: 0 0 0 0.2rem rgba(0, 86, 179, 0.25);
 }
 
-.about-section {
-  padding: 4rem 0;
-}
-
 .team-member {
   text-align: center;
   margin-bottom: 2rem;
@@ -161,4 +163,22 @@ section {
 
 .history-timeline {
   margin-top: 2rem;
+}
+
+.social-icon-footer-i {
+  color: blanchedalmond !important;
+  font-size: 20px;
+  margin: 5px;
+  width: 22px !important;
+  display: inline-block;
+}
+
+.copyright-footer {
+  background: lightgray;
+  border-radius: 10px;
+  color: black;
+  width: max-content;
+  margin: auto;
+  padding: 3px 20px;
+  font-size: 14px;
 }
