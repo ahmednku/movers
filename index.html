@@ -11,7 +11,9 @@
   </head>
   <body>
     <div id="header"></div>
-
+    <div class="loader-container">
+      <div class="loader"></div>
+    </div>
     <!-- Apply the hidden class to the data-aos parent (on smaller screens to prevent shakiness and horizontal scrolling) -->
     <main class="overflow-hidden">
       <section class="hero-section">
@@ -470,6 +472,7 @@
               id="message"
               rows="4"
               required
+              maxlength="100"
             ></textarea>
           </div>
           <button
@@ -493,6 +496,8 @@
       referrerpolicy="no-referrer"
     />
     <script src="./assets/aos/js/aos.js"></script>
+    <script src="./assets/sweetalert2/sweetalert.js"></script>
     <script src="./assets/js/app.js"></script>
+    <script type="module" src="./assets/js/contact.js"></script>
   </body>
 </html>

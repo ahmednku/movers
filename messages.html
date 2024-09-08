@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movers</title>
+    <link rel="icon" href="./favicon.ico" />
+    <link rel="stylesheet" href="./assets/aos/css/aos.css" />
+    <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <style>
+      body {
+        display: none;
+      }
+
+      .message-card {
+        position: relative;
+      }
+
+      .message-card::before {
+        content: counter(card) "";
+        counter-increment: card;
+        position: absolute;
+        top: -10px;
+        left: 0px;
+        background: brown;
+        color: #fff;
+        border-radius: 50%;
+        padding: 3px 8px;
+        font-weight: bold;
+        width: 30px;
+        display: grid;
+        place-items: center;
+      }
+
+      .messages {
+        counter-reset: card;
+      }
+    </style>
+    <script src="./assets/sweetalert2/sweetalert.js"></script>
+    <script type="module" src="./assets/js/messages.js"></script>
+  </head>
+  <body>
+    <div id="header"></div>
+    <div class="loader-container">
+      <div class="loader"></div>
+    </div>
+
+    <main class="overflow-hidden">
+      <section class="container">
+        <h1 class="text-center mb-5">Messages received</h1>
+        <div class="row messages">
+          <!-- prettier-ignore -->
+          <div class="col-md-6 col-lg-4 d-flex align-items-stretch message-card">
+            <div class="primary-bg p-3 rounded text-white flex-fill">
+              <h6 class="fw-bold">Name: <span class="fw-light" style="color: blanchedalmond" id="name">Lorem, ipsum dolor.</span></h6>
+              <h6 class="fw-bold">Email: <span class="fw-light" style="color: blanchedalmond" id="email">Lorem, ipsum dolor.</span></h6>
+              <h6 class="fw-bold">Phone: <span class="fw-light" style="color: blanchedalmond" id="phone">Lorem, ipsum dolor.</span></h6>
+              <h6 class="fw-bold">Message: <span class="fw-light" style="color: blanchedalmond" id="message">lorem</span></h6>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="footer"></div>
+    <script src="./assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="./assets/aos/js/aos.js"></script>
+    <script src="./assets/js/app.js"></script>
+  </body>
+</html>

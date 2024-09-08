@@ -18,26 +18,47 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 
-document.querySelector("form").addEventListener("submit", function (e) {
+document.querySelector("form").addEventListener("submit", async function (e) {
   e.preventDefault();
 
-  const name = document.getElementById("name").value;
-  const email = document.getElementById("email").value;
-  const phone = document.getElementById("phone").value;
-  const message = document.getElementById("message").value;
+  const name = document.getElementById("name");
+  const email = document.getElementById("email");
+  const phone = document.getElementById("phone");
+  const message = document.getElementById("message");
 
-  // Save to Firebase
-  push(ref(db, "messages"), {
-    name: name,
-    email: email,
-    phone: phone,
-    message: message,
-  })
-    .then(() => {
-      alert("Message sent and stored successfully!");
-      name = email = phone = message = "";
-    })
-    .catch((error) => {
-      console.error("Error writing to database", error);
-    });
+  const formData = {
+    name: name?.value ?? "",
+    email: email?.value ?? "",
+    phone: phone?.value ?? "",
+    message: message?.value ?? "",
+  };
+
+  showLoader();
+
+  try {
+    await push(ref(db, "messages"), formData);
+    hideLoader();
+    name.value = "";
+    email.value = "";
+    if (phone) phone.value = "";
+    message.value = "";
+
+    let timerInterval;
+    await Swal.fire({
+      title: "Message sent",
+      html: "",
+      timer: 2000,
+      timerProgressBar: true,
+      didOpen: () => {
+        // Swal.showLoading();
+        timerInterval = setInterval(() => {}, 100);
+      },
+      willClose: () => {
+        clearInterval(timerInterval);
+      },
+    }).then((result) => {});
+  } catch (error) {
+    hideLoader();
+    console.error("Error writing to database", error);
+  }
 });

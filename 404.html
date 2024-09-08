@@ -83,7 +83,14 @@
         Please check for any typo in URL. <br />
         Click below to visit website
       </p>
-      <a href="./index.html">Take me to home</a>
+      <a id="home-page-link" href="/index">Take me to home</a>
     </div>
+    <script>
+      const isLocalhost =
+        window.location.hostname === "localhost" ||
+        window.location.hostname === "127.0.0.1";
+      if (isLocalhost)
+        document.getElementById("home-page-link").href = "./index.html";
+    </script>
   </body>
 </html>
