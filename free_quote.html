@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movers</title>
+    <link rel="icon" href="./favicon.ico" />
+    <link rel="stylesheet" href="./assets/aos/css/aos.css" />
+    <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+  <body>
+    <div id="header"></div>
+    <div class="loader-container">
+      <div class="loader"></div>
+    </div>
+    <section class="hero-section overflow-hidden free-quotes-cover">
+      <div class="container">
+        <h1 data-aos="fade-left">Get Your Free Moving Quote Today</h1>
+        <p data-aos="fade-right">
+          Providing fast, accurate, and competitive quotes for all your office and home moving needs.
+        </p>
+      </div>
+    </section>
+    <!-- Apply the hidden class to the data-aos parent (on smaller screens to prevent shakiness and horizontal scrolling) -->
+    <div class="container p-lg-5 p-sm-1 m-sm-2 mt-4" data-aos="fade-up">
+      <!-- Hero Image Section -->
+      <div class="header-image">
+        <div class="header-overlay"></div>
+        <h2 data-aos="zoom-in">Request a Quote</h2>
+      </div>
+
+      <form class="row g-3">
+        <div class="col-md-6">
+          <label for="inputEmail4" class="form-label">Name</label>
+          <input type="email" id="name" class="form-control" id="inputEmail4" />
+        </div>
+        <div class="col-md-6">
+          <label for="inputPassword4" class="form-label">Phone</label>
+          <input
+            type="password"
+            id="phone"
+            class="form-control"
+            id="inputPassword4"
+          />
+        </div>
+        <div class="col-12">
+          <label for="inputAddress" class="form-label">From</label>
+          <input
+            id="from"
+            type="text"
+            class="form-control"
+            id="inputAddress"
+            placeholder="1234 Main St"
+          />
+        </div>
+        <div class="col-12">
+          <label for="inputAddress2" class="form-label">To</label>
+          <input
+            id="to"
+            type="text"
+            class="form-control"
+            id="inputAddress2"
+            placeholder="Apartment, studio, or floor"
+          />
+        </div>
+        <div class="col-md-6">
+          <label for="inputCity" class="form-label">City</label>
+          <input type="text" id="city" class="form-control" id="inputCity" />
+        </div>
+        <div class="col-md-4">
+          <label for="inputState" class="form-label">Type</label>
+          <select id="inputState" class="form-select">
+            <option>Residential</option>
+            <option>Villa</option>
+            <option>Office</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="col-md-2">
+          <label for="inputZip" class="form-label">Date</label>
+          <input type="date" id="date" class="form-control" id="inputZip" />
+        </div>
+        <div class="col-12 d-flex justify-content-end">
+          <button type="button" id="submit_btn" class="btn btn-success">
+            Submit
+          </button>
+        </div>
+      </form>
+
+      <!-- Illustration Section -->
+      <!-- <div class="illustration" data-aos="fade-up" data-aos-delay="1000">
+          <img src="https://cdn-icons-png.flaticon.com/512/2963/2963470.png" alt="Moving illustration">
+      </div> -->
+
+      <!-- Note Section -->
+      <p class="note" data-aos="fade-up" data-aos-delay="1100">
+        * We will get back to you within 24 hours with a custom quote.
+      </p>
+    </div>
+    <script>
+      document.getElementById("submit_btn").addEventListener("click", () => {
+        let quote_form = {
+          name: document.getElementById("name").value,
+          from: document.getElementById("from").value,
+          to: document.getElementById("to").value,
+          type: document.getElementById("inputState").value,
+          city: document.getElementById("city").value,
+          date: document.getElementById("date").value,
+        };
+        let ctaMessage = `Hello, my name is ${quote_form.name}. I would like to request a quote to move from ${quote_form.from} to ${quote_form.to}. 
+The move is a ${quote_form.type} move, and it's scheduled for ${quote_form.date}. The city involved is ${quote_form.city}. Please let me know the details!`;
+        window.location.href = `https://wa.me/923317361961?text=${ctaMessage}`;
+      });
+    </script>
+
+    <div id="footer"></div>
+    <script src="./assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="./assets/aos/js/aos.js"></script>
+    <script src="./assets/js/app.js"></script>
+  </body>
+</html>

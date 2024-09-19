@@ -1,4 +1,3 @@
-console.log("Movers");
 AOS.init();
 
 const pages = ["index", "services", "blogs", "contact", "about"];
@@ -19,7 +18,7 @@ const renderHTML = async (elementId, filePath) => {
       const pageLinks = {
         index: "./index.html",
         services: "./services.html",
-        blogs: "./blogs.html",
+        free_quote: "./free_quote.html",
         about: "./about.html",
         contact: "./contact.html",
       };

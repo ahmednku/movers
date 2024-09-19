@@ -49,9 +49,12 @@ header ul a {
 }
 
 .navbar-toggler {
-  border: 1px solid #333;
+  border: 1px solid white;
   border-radius: 0px;
   zoom: 0.9;
+}
+.navbar-toggler-icon {
+  filter: invert(1);
 }
 
 .navbar-toggler:focus {
@@ -97,7 +100,7 @@ header ul a {
 }
 
 .btn-custom:hover {
-  background-color: #0056b3 !important;
+  background-color: darkseagreen !important;
 }
 
 .service-icon {
@@ -166,7 +169,7 @@ header ul a {
 }
 
 .social-icon-footer-i {
-  color: blanchedalmond !important;
+  color: white !important;
   font-size: 20px;
   margin: 5px;
   width: 22px !important;
@@ -212,5 +215,18 @@ header ul a {
 @keyframes l3 {
   to {
     transform: rotate(1turn);
+  }
+}
+.service-card:hover {
+  box-shadow: 0px 0px 17px 5px lightgray;
+}
+.free-quotes-cover {
+  background: url(./../images/quote_cover.png) !important;
+}
+
+@media (max-width: 768px) {
+  .free_quote_li {
+    margin: unset !important;
+    margin-left: -2px;
   }
 }
