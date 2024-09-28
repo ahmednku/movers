@@ -1,6 +1,6 @@
 AOS.init();
 
-const pages = ["index", "services", "blogs", "contact", "about"];
+const pages = ["index", "services", "contact", "about"];
 const renderHTML = async (elementId, filePath) => {
   try {
     const response = await fetch(filePath);
@@ -33,11 +33,15 @@ const renderHTML = async (elementId, filePath) => {
     pages.forEach((page) => {
       if (window.location.pathname === "/") {
         document.querySelectorAll(".index").forEach((element) => {
-          element.classList.add("border-bottom", "rounded-3", "pb-0");
+          element.classList.add(
+            "activeNav"
+          );
         });
       } else if (window.location.pathname.indexOf(page) > -1) {
         document.querySelectorAll("." + page).forEach((element) => {
-          element.classList.add("border-bottom", "rounded-3", "pb-0");
+          element.classList.add(
+            "activeNav"
+          );
         });
       }
     });

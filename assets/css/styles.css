@@ -46,6 +46,12 @@ section {
 
 header ul a {
   width: max-content !important;
+  margin: 0px 10px !important;
+  padding: 0px !important;
+}
+.activeNav {
+  border-bottom: 1px solid white !important;
+  border-radius: 0px !important;
 }
 
 .navbar-toggler {
@@ -54,7 +60,7 @@ header ul a {
   zoom: 0.9;
 }
 .navbar-toggler-icon {
-  filter: invert(1);
+  filter: invert(10);
 }
 
 .navbar-toggler:focus {
@@ -212,6 +218,12 @@ header ul a {
   mask-composite: subtract;
   animation: l3 1s infinite linear;
 }
+.free_quote {
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
 @keyframes l3 {
   to {
     transform: rotate(1turn);
@@ -228,5 +240,12 @@ header ul a {
   .free_quote_li {
     margin: unset !important;
     margin-left: -2px;
+  }
+}
+
+@media (min-width: 768px) {
+  .nav-item {
+    display: flex;
+    align-items: center;
   }
 }
